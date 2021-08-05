@@ -38,19 +38,19 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
 CHERISH_BUILD_TYPE := OFFICIAL
-CHERISH_WITHGAPPS=true
+WITH_GMS := true
 
 PRODUCT_GENERIC_PROPERTIES += \
     ro.cherish.maintainer=Freesoul00
 
 	# Build Fingerprint
-	PRODUCT_BUILD_PROP_OVERRIDES += \
-	TARGET_DEVICE="cepheus" \
-	PRODUCT_NAME="cepheus" \
-	PRIVATE_BUILD_DESC="redfin-user 11 RQ2A.210605.003 7255357 release-keys"
-	BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+TARGET_DEVICE="cepheus" \
+PRODUCT_NAME="cepheus" \
+PRIVATE_BUILD_DESC="redfin-user 11 RQ2A.210605.003 7255357 release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys"
 
-		PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 		ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 # Include firmware
