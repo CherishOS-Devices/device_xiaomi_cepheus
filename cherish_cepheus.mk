@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The CherishOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -21,33 +20,34 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from cepheus device
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
-# Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/kangos/config/common.mk)
+# Inherit some common CHERISH stuff.
+$(call inherit-product, vendor/cherish/config/common.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_PRODUCT_PROPERTIES += \
-  ro.kangos.maintainer=freesoul00 \
-  ro.kangos.cpu=SDM855
-
-
 # Device identifier
-PRODUCT_NAME := kangos_cepheus
+PRODUCT_NAME := cherish_cepheus
 PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
-KANGOS_BUILD_TYPE := OFFICIAL
+CHERISH_BUILD_TYPE := OFFICIAL
+WITH_GMS := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
-BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.cherish.maintainer=Freesoul00
+
+# Fingerprint
+BUILD_FINGERPRINT := google/redfin/redfin:12/SPB5.210812.002/7671067:user/release-keys
+BUILD_DESCRIPTION := redfin-user 12 SPB5.210812.002 7671067 release-keys
+PRODUCT_PROPERTY_OVERRIDES += \
+ ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys" \
-    PRODUCT_NAME="cepheus"
-    
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
-    
+    PRIVATE_BUILD_DESC="$(BUILD_DESCRIPTION)"
+
 # Include firmware
 # $(call inherit-product, vendor/xiaomi-firmware/cepheus/firmware.mk)
+

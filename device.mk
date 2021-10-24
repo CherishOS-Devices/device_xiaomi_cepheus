@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The CherishOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -134,7 +134,7 @@ endif
 #    XiaomiParts
 
 # Dex
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+#PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 
 # Display
 PRODUCT_PACKAGES += \
@@ -367,7 +367,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-cherish
 
 # Power
 PRODUCT_PACKAGES += \

@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/kangos_cepheus.mk
+    $(LOCAL_DIR)/cherish_cepheus.mk
 
 COMMON_LUNCH_CHOICES := \
-    kangos_cepheus-user \
-    kangos_cepheus-userdebug \
-    kangos_cepheus-eng
+    cherish_cepheus-user \
+    cherish_cepheus-userdebug \
+    cherish_cepheus-eng
