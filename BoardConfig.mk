@@ -190,14 +190,16 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2021-07-01
 
 # Sepolicy
-#TARGET_SEPOLICY_DIR := msmnile
-#include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
-#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+TARGET_SEPOLICY_DIR := msmnile
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+SELINUX_IGNORE_NEVERALLOWS := true
+
 
 # USB
 TARGET_QTI_USB_SUPPORTS_AUDIO_ACCESSORY := true
