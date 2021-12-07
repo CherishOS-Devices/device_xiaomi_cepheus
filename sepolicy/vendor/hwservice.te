@@ -11,8 +11,8 @@ type hal_xiaomi_fingerprint_hwservice, hwservice_manager_type;
 type hal_mlipay_hwservice, hwservice_manager_type;
 
 # NXP services
-type nxpese_hwservice, hwservice_manager_type;
+type hal_nxpnfc_hwservice, hwservice_manager_type;
+type hal_nxpese_hwservice, hwservice_manager_type;
 type nxpnfc_hwservice, hwservice_manager_type;
+type nxpese_hwservice, hwservice_manager_type;
 
-allow hal_memtrack_default hal_memtrack_hwservice:hwservice_manager { find add };
-allow hal_memtrack_default hidl_base_hwservice:hwservice_manager add;
