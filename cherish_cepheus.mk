@@ -22,7 +22,7 @@ $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
 # Inherit some common CHERISH stuff.
 $(call inherit-product, vendor/cherish/config/common.mk)
-
+TARGET_SUPPORTS_QUICK_TAP := true
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
@@ -50,4 +50,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Include firmware
 # $(call inherit-product, vendor/xiaomi-firmware/cepheus/firmware.mk)
-
