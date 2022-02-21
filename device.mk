@@ -208,6 +208,11 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3.vendor \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
+# Codec2 modules
+PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
+
 # Fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
