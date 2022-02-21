@@ -82,8 +82,6 @@ on late-fs
     start vendor.qti.hardware.display.allocator
     start vendor.light-hal-2-0
 
-    wait_for_prop hwservicemanager.ready true
-    exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data

@@ -19,6 +19,9 @@ persist.vendor.camera.multicam=TRUE
 # Display density
 ro.sf.lcd_density=440
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Graphics
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
