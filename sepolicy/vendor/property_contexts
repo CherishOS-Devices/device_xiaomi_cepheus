@@ -36,3 +36,4 @@ vendor.thermal.config              u:object_r:vendor_thermal_prop:s0
 
 # Xiaomi thermal daemon
 vendor.sys.thermal.                     u:object_r:thermal_normal_prop:s0
+
